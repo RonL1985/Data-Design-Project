@@ -7,7 +7,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	zoom: reset;
+	zoom: inherit;
 	visibility: visible !important;
 }
 #coFrameDiv {
@@ -24,14 +24,14 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	zoom: reset;
+	zoom: inherit;
 }
 
 #coFrameDiv * {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	user-select: none;
-	zoom: reset;
+	zoom: inherit;
 }
 
 @media print {
