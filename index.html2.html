@@ -42,18 +42,19 @@
 		<li id="item14">CustomerEmail</li>
 		<li id="item15">CustomerHash(for Account password)</li>
 		<li id="item16">CustomerUserName</li>
+		<li id="item17">CustomerPhone</li>
 	</ul>
 	</body>
 	<p>Shopping Cart:</p>
 <ul>
-	<li id="item17">ShoppingCartCustomerID(foreign key)</li>
-	<li id="item18">ShoppingcartProductID(foreign key)</li>
+	<li id="item18">ShoppingCartCustomerID(foreign key)</li>
+	<li id="item19">ShoppingCartProductID(foreign key)</li>
 </ul>
 	<body>
 		<p>Relations:</p>
 		<ul>
-			<li id="item19">One customer may only belong to one Privet account. (1 to 1)</li>
-			<li id="item20">Many customers can purchase many products. (m to M)</li>
+			<li id="item20">One customer may only belong to one Privet account. (1 to n)</li>
+			<li id="item21">Many customers can purchase many products. (m to n)</li>
 		</ul>
 	</body>
 	<h1>Entity Relationship Diagram:</h1>
