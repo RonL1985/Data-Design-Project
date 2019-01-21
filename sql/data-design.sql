@@ -119,19 +119,19 @@ UPDATE customer
   SET customerUserName = 'TimAdams'
   WHERE customerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
 
-UPDATE post
-  SET postContent = 'time for content'
-  WHERE postId = '76e5bb3b-890c-4c5d-ba4c-eea7014a3d91';
+UPDATE product
+  SET productContent = 'time for content'
+  WHERE productId = '76e5bb3b-890c-4c5d-ba4c-eea7014a3d91';
 
-UPDATE comments
-  SET commentsContent = 'my content like your content'
-  WHERE commentsProfileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+UPDATE shoppingcart
+  SET shoppingcartContent = 'my content like your content'
+  WHERE shoppingcartcustomerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
 
-DELETE FROM profile
-  WHERE profileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+DELETE FROM customer
+  WHERE customerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
 
-DELETE FROM post
-  WHERE postProfileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+DELETE FROM product
+  WHERE productCustomerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
 
-DELETE FROM comments
-  WHERE commentsProfileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+DELETE FROM customer
+  WHERE customerUserNameId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
