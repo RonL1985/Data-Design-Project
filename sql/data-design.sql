@@ -58,3 +58,80 @@ CREATE TABLE `shoppingCart` (
 	-- finally, create a composite foreign key with the two foreign keys
 	PRIMARY KEY(shoppingCartCustomerId, shoppingCartProductId)
 );
+
+INSERT INTO customer (customerId, customerUserName, customerEmail, customerPhone, customerHash, customerSalt)
+VALUES(
+  -- generated UUID for customer id converted to binary
+   UNHEX(REPLACE('dc12ace9-3796-4902-931c-722e4f19bfd2','-', '')),
+  -- customer userName chosen by user
+  'rluna41',
+  -- email
+ 'ronaldluna1@gmail.com',
+  -- phone
+  '5059479586',
+  -- hash, salt
+ '894e65fe9b536b64d7a1940e46ec9cb923fab7f1d63be350b43106851235cb23e798e19a85fee1ecd84e988dbbbf1c59881b003d94f9a23dcfd132fca5ef27bd', 'd79d674bb81c24fff3a8af16cb4c6c2b28eec296d4c05745d08e9178e3144f5d2478564'
+);
+
+INSERT INTO customer (customerId, customerId, customerTitle, customerContent, customerDate)
+    VALUES(
+        -- genereated UUID for post id converted to binary
+        UNHEX(REPLACE('db910b19-11c8-4087-b0c1-d33b92ca74b3','-', '')),
+      -- customer userName Id converted from binary
+        UNHEX('dc12ace9-3796-4902-931c-722e4f19bfd2'),
+      -- customer title
+        'customer',
+      -- customer content
+        'Dont Worry Be Happy',
+      -- customer date
+        '2019/21/01'
+);
+
+INSERT INTO product (productId, customerProductId, customerShoppingcartId, productTitle, ProductContent, productDate)
+    VALUE (
+    -- generated UUID for comment id converted to binary
+    UNHEX(REPLACE('76e5bb3b-890c-4c5d-ba4c-eea7014a3d91','-', '')),
+    -- product id
+    UNHEX(REPLACE('db910b19-11c8-4087-b0c1-d33b92ca74b3','-', '')),
+    -- productCustomer id
+    UNHEX('dc12ace9-3796-4902-931c-722e4f19bfd2'),
+    -- title
+    'this is a title',
+    -- product
+    'i have product',
+    -- date
+    '2019/21/01'
+);
+
+SELECT customerId, customerUserName, customerEmail
+  FROM customer
+  WHERE customerEmail LIKE 'Flash%';
+
+SELECT productContent, productTitle, productDate
+  FROM product
+  WHERE productContent LIKE '%Wish.com';
+
+SELECT shoppingcartDate, shoppingcartTitle, shoppingcartContent
+  FROM shoppingcart
+  WHERE shoppingcartDate = '2019/21/01';
+
+UPDATE customer
+  SET customerUserName = 'TimAdams'
+  WHERE customerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+
+UPDATE post
+  SET postContent = 'time for content'
+  WHERE postId = '76e5bb3b-890c-4c5d-ba4c-eea7014a3d91';
+
+UPDATE comments
+  SET commentsContent = 'my content like your content'
+  WHERE commentsProfileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+
+DELETE FROM profile
+  WHERE profileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+
+DELETE FROM post
+  WHERE postProfileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+
+DELETE FROM comments
+  WHERE commentsProfileId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
