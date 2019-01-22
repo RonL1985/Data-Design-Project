@@ -62,7 +62,7 @@ CREATE TABLE `shoppingCart` (
 INSERT INTO customer (customerId, customerUserName, customerEmail, customerPhone, customerHash, customerSalt)
 VALUES(
   -- generated UUID for customer id converted to binary
-   UNHEX(REPLACE('dc12ace9-3796-4902-931c-722e4f19bfd2','-', '')),
+   UNHEX(REPLACE('1c8e982f654e46aea06d8c1c0fe50f33','-', '')),
   -- customer userName chosen by user
   'rluna41',
   -- email
@@ -76,9 +76,9 @@ VALUES(
 INSERT INTO customer (customerId, customerId, customerTitle, customerContent, customerDate)
     VALUES(
         -- genereated UUID for post id converted to binary
-        UNHEX(REPLACE('db910b19-11c8-4087-b0c1-d33b92ca74b3','-', '')),
+        UNHEX(REPLACE('6c6266f6-a93e-4833-8810-19186b31afad','-', '')),
       -- customer userName Id converted from binary
-        UNHEX('dc12ace9-3796-4902-931c-722e4f19bfd2'),
+        UNHEX('1c8e982f654e46aea06d8c1c0fe50f33'),
       -- customer title
         'customer',
       -- customer content
@@ -90,11 +90,11 @@ INSERT INTO customer (customerId, customerId, customerTitle, customerContent, cu
 INSERT INTO product (productId, customerProductId, shoppingcartProducttId, productTitle, ProductContent, productDate)
     VALUE (
     -- generated UUID for comment id converted to binary
-    UNHEX(REPLACE('76e5bb3b-890c-4c5d-ba4c-eea7014a3d91','-', '')),
+    UNHEX(REPLACE('1c8e982f654e46aea06d8c1c0fe50f33','-', '')),
     -- product id
-    UNHEX(REPLACE('db910b19-11c8-4087-b0c1-d33b92ca74b3','-', '')),
+    UNHEX(REPLACE('6c6266f6a93e4833881019186b31afad','-', '')),
     -- productCustomer id
-    UNHEX('dc12ace9-3796-4902-931c-722e4f19bfd2'),
+    UNHEX('1c8e982f654e46aea06d8c1c0fe50f33'),
     -- title
     'this is a title',
     -- product
@@ -117,22 +117,22 @@ SELECT shoppingcartDate, shoppingcartTitle, shoppingcartContent
 
 UPDATE customer
   SET customerUserName = 'TimAdams'
-  WHERE customerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+  WHERE customerId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
 UPDATE product
   SET productContent = 'time for content'
-  WHERE productId = '76e5bb3b-890c-4c5d-ba4c-eea7014a3d91';
+  WHERE productId = '6c6266f6a93e4833881019186b31afad';
 
 UPDATE shoppingcart
   SET shoppingcartContent = 'my content like your content'
-  WHERE shoppingcartcustomerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+  WHERE shoppingcartcustomerId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
 DELETE FROM customer
-  WHERE customerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+  WHERE customerId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
 DELETE FROM product
-  WHERE productCustomerId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+  WHERE productCustomerId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
 DELETE FROM customer
-  WHERE customerUserNameId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+  WHERE customerUserNameId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
