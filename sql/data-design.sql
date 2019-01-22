@@ -44,7 +44,7 @@ CREATE TABLE product (
 	PRIMARY KEY(productId)
 );
 
--- create the like entity (a weak entity from an m-to-n for profile --> tweet)
+-- create the like entity (a weak entity from an m-to-n for profile --> customer)
 CREATE TABLE `shoppingCart` (
 	-- these are still foreign keys
 	shoppingCartCustomerId BINARY(16) NOT NULL,
@@ -87,7 +87,7 @@ INSERT INTO customer (customerId, customerId, customerTitle, customerContent, cu
         '2019/21/01'
 );
 
-INSERT INTO product (productId, customerProductId, customerShoppingcartId, productTitle, ProductContent, productDate)
+INSERT INTO product (productId, customerProductId, shoppingcartProducttId, productTitle, ProductContent, productDate)
     VALUE (
     -- generated UUID for comment id converted to binary
     UNHEX(REPLACE('76e5bb3b-890c-4c5d-ba4c-eea7014a3d91','-', '')),
@@ -135,3 +135,4 @@ DELETE FROM product
 
 DELETE FROM customer
   WHERE customerUserNameId = 'dc12ace9-3796-4902-931c-722e4f19bfd2';
+
