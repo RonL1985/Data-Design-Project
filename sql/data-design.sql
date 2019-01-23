@@ -59,7 +59,7 @@ CREATE TABLE `shoppingCart` (
 	PRIMARY KEY(shoppingCartCustomerId, shoppingCartProductId)
 );
 
-INSERT INTO customer (customerId, customerUserName, customerEmail, customerPhone, customerHash, customerSalt)
+INSERT INTO customer (customerId, customerUserName, customerEmail, customerPhone, customerHash,)
 VALUES(
   -- generated UUID for customer id converted to binary
    UNHEX(REPLACE('1c8e982f654e46aea06d8c1c0fe50f33','-', '')),
@@ -69,22 +69,18 @@ VALUES(
  'ronaldluna1@gmail.com',
   -- phone
   '5059479586',
-  -- hash, salt
+  -- hash,
  '894e65fe9b536b64d7a1940e46ec9cb923fab7f1d63be350b43106851235cb23e798e19a85fee1ecd84e988dbbbf1c59881b003d94f9a23dcfd132fca5ef27bd', 'd79d674bb81c24fff3a8af16cb4c6c2b28eec296d4c05745d08e9178e3144f5d2478564'
 );
 
-INSERT INTO customer (customerId, customerId, customerTitle, customerContent, customerDate)
+INSERT INTO product (productId, productcustomerId, productName,)
     VALUES(
         -- genereated UUID for post id converted to binary
         UNHEX(REPLACE('6c6266f6-a93e-4833-8810-19186b31afad','-', '')),
       -- customer userName Id converted from binary
         UNHEX('1c8e982f654e46aea06d8c1c0fe50f33'),
-      -- customer title
-        'customer',
-      -- customer content
-        'Dont Worry Be Happy',
-      -- customer date
-        '2019/21/01'
+      -- product title
+        'customer
 );
 
 INSERT INTO product (productId, customerProductId, shoppingcartProducttId, productTitle, ProductContent, productDate)
@@ -105,15 +101,15 @@ INSERT INTO product (productId, customerProductId, shoppingcartProducttId, produ
 
 SELECT customerId, customerUserName, customerEmail
   FROM customer
-  WHERE customerEmail LIKE 'Flash%';
+  WHERE customerEmail LIKE '%ona%';
 
 SELECT productContent, productTitle, productDate
   FROM product
-  WHERE productContent LIKE '%Wish.com';
+  WHERE productTitle LIKE '%hood%';
 
 SELECT shoppingcartDate, shoppingcartTitle, shoppingcartContent
   FROM shoppingcart
-  WHERE shoppingcartDate = '2019/21/01';
+  WHERE shoppingcartTitle
 
 UPDATE customer
   SET customerUserName = 'TimAdams'
@@ -135,4 +131,3 @@ DELETE FROM product
 
 DELETE FROM customer
   WHERE customerUserNameId = '1c8e982f654e46aea06d8c1c0fe50f33';
-
