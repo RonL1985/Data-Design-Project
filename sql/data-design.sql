@@ -6,7 +6,7 @@ ALTER DATABASE your_database_name_CHANGE_ME CHARACTER SET utf8 COLLATE utf8_unic
 -- this is akin to reformatting and reinstalling Windows (OS X never needs a reinstall...) ;)
 -- never ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever
 -- do this on live data!!!!
-DROP TABLE IF EXISTS `Shopping`;
+DROP TABLE IF EXISTS `ShoppingCart`;
 DROP TABLE IF EXISTS Product;
 DROP TABLE IF EXISTS customer;
 

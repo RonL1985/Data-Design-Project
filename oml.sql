@@ -71,7 +71,7 @@ DELETE FROM product
 DELETE FROM customer
   WHERE customerUserNameId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
-SELECT customer.customerId,customer.customerUserName, product.productId, product.productName frome customer inner join product on customer.customerId = product. productCustomerId WHERE customerId = '1c8e982f654e46aea06d8c1c0fe50f33';
+SELECT customer.customerId,customer.customerUserName, product.productId, product.productName from customer inner join product on customer.customerId = product. productCustomerId WHERE customerId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
 SELECT count(product)
 WHERE productCustomerId = '6c6266f6a93e4833881019186b31afad';
