@@ -33,7 +33,7 @@ INSERT INTO product (productId, customerProductId, shoppingcartProducttId, produ
     -- title
     'this is a title',
     -- product
-    'i have product',
+    'I have product',
     -- date
     '2019/21/01'
 );
@@ -73,4 +73,6 @@ DELETE FROM customer
 
 SELECT customer.customerId,customer.customerUserName, product.productId, product.productName frome customer inner join product on customer.customerId = product. productCustomerId WHERE customerId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
-VALUE
+SELECT productSelection, count(*)
+FROM product
+Group by productId;
