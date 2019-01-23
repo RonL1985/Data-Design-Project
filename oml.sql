@@ -73,10 +73,6 @@ DELETE FROM customer
 
 SELECT customer.customerId,customer.customerUserName, product.productId, product.productName frome customer inner join product on customer.customerId = product. productCustomerId WHERE customerId = '1c8e982f654e46aea06d8c1c0fe50f33';
 
-SELECT productSelection, count(*)
-FROM product
-Group by productId;
+SELECT count(product)
+WHERE productCustomerId = '6c6266f6a93e4833881019186b31afad';
 
-SELECT customerUserName, count(*)
-FROM customer
-Group by customerId;
