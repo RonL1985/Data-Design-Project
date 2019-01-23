@@ -76,3 +76,7 @@ SELECT customer.customerId,customer.customerUserName, product.productId, product
 SELECT productSelection, count(*)
 FROM product
 Group by productId;
+
+SELECT customerUserName, count(*)
+FROM customer
+Group by customerId;
